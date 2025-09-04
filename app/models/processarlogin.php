@@ -21,10 +21,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header('Location: ../../index.php');
             exit();
         } else {
-            echo "Senha incorreta!";
+            // Senha incorreta - voltar para login com mensagem de erro
+            header('Location: ../views/login.php?erro=senha_incorreta');
+            exit();
         }
     } else {
-        echo "Usuário não encontrado!";
+        // Usuário não encontrado - voltar para login com mensagem de erro
+        header('Location: ../views/login.php?erro=usuario_nao_encontrado');
+        exit();
     }
 }
 mysqli_close($conn);

@@ -1,3 +1,15 @@
+<?php
+session_start();
+// Verificar se há parâmetros de erro na URL
+$erro = isset($_GET['erro']) ? $_GET['erro'] : '';
+$mensagem_erro = '';
+
+if ($erro === 'senha_incorreta') {
+    $mensagem_erro = 'Senha incorreta!';
+} elseif ($erro === 'usuario_nao_encontrado') {
+    $mensagem_erro = 'Usuário não encontrado!';
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -29,6 +41,13 @@
                                 <div class="campo-formulario">
                                     <input type="password" id="login-senha" placeholder="Senha" name="senha">
                                 </div>
+
+                                <!-- Mensagem de erro  -->
+                                <?php if (!empty($mensagem_erro)): ?>
+                                    <div class="mensagem-erro">
+                                        <?php echo $mensagem_erro; ?>
+                                    </div>
+                                <?php endif; ?>
                                 
                                 <button type="submit" class="btn-cadastrar" id="btn-entrar">Entrar</button>
                                 </form>
@@ -49,3 +68,5 @@
 
 </body>
 </html>
+
+

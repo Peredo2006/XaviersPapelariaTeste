@@ -22,7 +22,7 @@ $is_gerente = ($_SESSION['user_type'] === 'Gerente');
     <link rel="stylesheet" href="public/assets/css/style.css">
 </head>
 <body class="pagina-inicial">
-    <h1>👋 Bem-vindo, <?php echo $_SESSION['user_name']; ?>!</h1>
+    <h1>👋 Bem-vindo(a), <?php echo $_SESSION['user_name']; ?>!</h1>
     
     <div class="logo-central">
         <img src="public/assets/images/logo.png" alt="Xavier's Logo">
@@ -48,4 +48,3 @@ $is_gerente = ($_SESSION['user_type'] === 'Gerente');
     </div>
 </body>
 </html>
-

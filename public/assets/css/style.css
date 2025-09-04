@@ -274,45 +274,66 @@
             position: relative;
             z-index: 3;
         }
-        
+
         .campo-formulario input {
-            width: 100%;
-            padding: 15px;
-            border-radius: 15px;
-            border: none;
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            font-size: 1rem;
-            color: #E03A7F;
-            box-sizing: border-box;
+                width: 100%;
+                padding: 15px;
+                border-radius: 15px;
+                border: none;
+                background-color: white;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                font-size: 1rem;
+                color: #E03A7F;
+                box-sizing: border-box;
+                margin-bottom: 10px;
         }
-        
+
         .campo-formulario input::placeholder {
             color: #E03A7F;
             opacity: 0.8;
         }
-        
-        .btn-cadastrar {
-            background-color: #E03A7F;
-            border: none;
-            color: white;
-            padding: 15px 40px;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            margin-top: 20px;
-            transition: all 0.3s;
-            font-weight: bold;
-            cursor: pointer;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            z-index: 3; 
-            position: relative;
-        }
-        
-        .btn-cadastrar:hover {
-            background-color: #c42b6b;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-        }
+
+            .btn-cadastrar {
+                background-color: #E03A7F;
+                border: none;
+                color: white;
+                padding: 15px 40px;
+                border-radius: 50px;
+                font-size: 1.2rem;
+                margin-top: 15px;
+                transition: all 0.3s;
+                font-weight: bold;
+                cursor: pointer;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+                width: auto;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .btn-cadastrar:hover {
+                background-color: #c42b6b;
+                transform: translateY(-2px);
+                box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+            }
+
+            .mensagem-erro {
+                color: #E03A7F;
+                background-color: #FFEBEE;
+                padding: 12px;
+                border-radius: 10px;
+                margin: 15px 0;
+                text-align: center;
+                font-weight: bold;
+                border: 2px solid #E03A7F;
+                animation: fadeIn 0.5s;
+                width: 100%;
+            }
+
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(-10px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
         
         .texto-login {
             color: #7A06C7;
