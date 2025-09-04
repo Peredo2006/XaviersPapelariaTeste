@@ -47,7 +47,7 @@ $usuarios = mysqli_fetch_all($result, MYSQLI_ASSOC);
     <!-- header -->
     <header class="header">
         <div class="logo">
-            <a href="../../index.php><img src="../../public/assets/images/logo.png" alt="Logo Xavier's"></a>
+            <img src="../../public/assets/images/logo.png" alt="Logo Xavier's">
         </div>
         <div>
             <span class="me-3 text-light"><?php echo $_SESSION['user_name']; ?> (<?php echo $_SESSION['user_type']; ?>)</span>
@@ -234,4 +234,5 @@ $usuarios = mysqli_fetch_all($result, MYSQLI_ASSOC);
     </script>
 </body>
 </html>
+
 
