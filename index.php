@@ -44,7 +44,8 @@ $is_gerente = ($_SESSION['user_type'] === 'Gerente');
     </div>
     
     <div class="user-info">
-        <a href="app/controls/logout.php" class="btn-sair">Sair</a>
+        <a href="app/models/logout.php" class="btn-sair">Sair</a>
     </div>
 </body>
 </html>
+
