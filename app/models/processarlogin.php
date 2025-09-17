@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit();
         } else {
             // Senha incorreta - voltar para login com mensagem de erro
-            header('Location: ../views/login.php?erro=senha_incorreta');
+            header('Location: ../views/usuarios.php');
             exit();
         }
     } else {
