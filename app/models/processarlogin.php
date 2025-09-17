@@ -22,7 +22,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit();
         } else {
             // Senha incorreta - voltar para login com mensagem de erro
-            header('Location: ../views/usuarios.php');
+               $_SESSION['user_id'] = $user['id_usuario'];
+            $_SESSION['user_email'] = $user['email'];
+            $_SESSION['user_name'] = $user['nome'];
+            $_SESSION['user_type'] = $user['tipo'];
+            
+            header('Location: ../../index.php');
             exit();
         }
     } else {
