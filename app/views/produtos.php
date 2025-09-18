@@ -223,7 +223,7 @@ function e($v){ return htmlspecialchars($v, ENT_QUOTES, 'UTF-8'); }
                 document.getElementById('quantidade').value = data.quantidade ?? 0;
                 document.getElementById('preco').value = parseFloat(data.preco ?? 0).toFixed(2);
                 document.getElementById('descricao').value = data.descricao ?? '';
-                document.getElementById('imagem').value ='';
+                document.getElementById('imagem').value = '';
                 document.getElementById('modal').classList.add('open');
             })
             .catch(e => { console.error(e); alert('Erro ao buscar produto'); });
@@ -235,7 +235,5 @@ function e($v){ return htmlspecialchars($v, ENT_QUOTES, 'UTF-8'); }
 
 </body>
 </html>
-
-
 
 
