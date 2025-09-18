@@ -30,7 +30,7 @@ $is_gerente = ($_SESSION['user_type'] === 'Gerente');
 
     <div class="menu-container">
         <div class="menu-coluna esquerda">
-            <a href="app/views/estoque.html" class="opcao-menu">Gerenciar estoque</a>
+            <a href="app/views/produtos.php" class="opcao-menu">Gerenciar produtos</a>
             <?php if ($is_gerente): ?>
                 <a href="app/views/usuarios.php" class="opcao-menu">Gerenciar funcionários</a>
             <?php else: ?>
@@ -47,4 +47,5 @@ $is_gerente = ($_SESSION['user_type'] === 'Gerente');
         <a href="app/models/logout.php" class="btn-sair">Sair</a>
     </div>
 </body>
+
 </html>
