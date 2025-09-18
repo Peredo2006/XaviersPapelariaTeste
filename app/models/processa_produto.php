@@ -36,7 +36,7 @@ if ($acao === 'editar' && $_SERVER['REQUEST_METHOD'] === 'POST') {
     $quantidade = intval($_POST['quantidade'] ?? 0);
     $preco = floatval($_POST['preco'] ?? 0);
     $descricao = trim($_POST['descricao'] ?? '');
-    $fotoAtual = $_POST['imagem'] ?? '';
+    $fotoAtual = $_POST['foto_atual'] ?? ''; // CORRIGIDO: era 'imagem'
     $fotoNome = $fotoAtual;
 
     if (!empty($_FILES['imagem']['name'])) {
@@ -44,8 +44,9 @@ if ($acao === 'editar' && $_SERVER['REQUEST_METHOD'] === 'POST') {
         $ext = pathinfo($_FILES['imagem']['name'], PATHINFO_EXTENSION);
         $fotoNome = uniqid('p_') . '.' . $ext;
         move_uploaded_file($_FILES['imagem']['tmp_name'], $uploadDir . $fotoNome);
-        // remove antiga
-        if ($fotoAtual && file_exists($uploadDir . $fotoAtual)) {
+        
+        // remove antiga apenas se for diferente e existir
+        if ($fotoAtual && $fotoAtual !== $fotoNome && file_exists($uploadDir . $fotoAtual)) {
             @unlink($uploadDir . $fotoAtual);
         }
     }
